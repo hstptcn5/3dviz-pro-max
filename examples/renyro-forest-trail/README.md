@@ -1,35 +1,32 @@
 # Renyro Forest Trail Workflow
 
-A skill-driven `3dviz-pro-max` nature study that projects the same Renyro-shaped Document AI execution model into a calm forest trail. The forest is presentation only; workflow IDs, edges, statuses, durations and branch routes remain authoritative.
+A calm, stylized forest projection of the existing Renyro-shaped Document AI fixture. The forest is presentation only: workflow IDs, edges, branch routes, statuses and durations remain owned by the fixture and projection model in `renyro-execution-observatory/`.
 
-## Final refined direction
+## Explore the trail
 
-The first browser-observed pass proved the concept but still looked like a prototype: repeated cone trees, a broad flat ground plate, tube-like workflow paths, an under-developed hero tree, wide framing and debug-heavy labels. The final refinement keeps the semantic mapping but rebuilds the environment around the weaknesses actually visible in that render.
+The Ancient Insight Tree is the central landmark. Rounded terrain, shaded woodland clusters and an open confidence fork separate the trail into a warm output path, a human-review route and a cooler exception spur. The creek and entrance bridge are scenery; they are not workflow edges.
 
-### What changed
+| Workflow step | Forest landmark |
+| --- | --- |
+| Upload | Forest Gate |
+| Read document | Ranger Archive Hut |
+| AI Extract | Ancient Insight Tree |
+| Confidence Gate | Forked Trail |
+| Human Review | Review Camp |
+| Approve / Reject | Decision Lookout |
+| Export JSON / CSV | Output Lodge |
+| Reject / Error Inbox | Shadow Grove |
 
-- terrain is now a deformed ground mesh with gentle height variation and distant hill layers;
-- workflow edges are flat ground-following dirt ribbons instead of pipe-like tubes;
-- a creek and small timber bridge add a secondary natural layer without becoming workflow state;
-- vegetation is diversified into instanced pine, broadleaf, shrub, grass and rock populations;
-- **Ancient Insight Tree** is promoted to the hero object with branching limbs, roots, a layered crown, rune ring, orbiting motes and a restrained magical glow;
-- Ranger Archive, Review Camp, Decision Lookout, Output Lodge and Shadow Grove receive more identity-defining detail;
-- station labels use a softer forest treatment and can be toggled from the controls;
-- lighting is warmer and more directional to reveal form and separate the trail from the background;
-- overview and review-branch camera views were tightened for a more useful composition.
+The route stays:
 
-## Semantic mapping
+- Upload → Read document → AI Extract → Confidence Gate.
+- High confidence → Export JSON / CSV.
+- Low confidence → Human Review → Approve / Reject.
+- Approved → Export JSON / CSV; rejected → Reject / Error Inbox.
 
-- Upload → **Forest Gate**
-- Read document → **Ranger Archive**
-- AI Extract → **Ancient Insight Tree**
-- Confidence Gate → **Forked Trail**
-- Human Review → **Review Camp**
-- Approve / Reject → **Decision Lookout**
-- Export JSON / CSV → **Output Lodge**
-- Reject / Error Inbox → **Shadow Grove**
+Grounded dirt paths, inset direction markers and the route key show the branches when motion is paused. Luminous wisps and station lanterns derive their active state from the existing projection. Screen labels show the software step, forest landmark and recorded status. Review Camp adds a blue signal and an explicit **WAITING · HUMAN REVIEW** badge during the hold.
 
-Execution still travels as luminous wisps on active trails. `WAITING` pulses at Review Camp, active/error stations use their workflow status color, and the exception destination remains spatially separated from the success path.
+The supplied seven-frame playback follows review and approval. It contains `RUNNING`, `WAITING`, `SUCCESS` and `SKIPPED`; it does **not** contain a failed or rejected run. The exception trail and `FAILED` styling exist without inventing additional execution evidence.
 
 ## Run locally
 
@@ -41,23 +38,21 @@ npm install
 npm run dev
 ```
 
-Then open:
+Open `http://127.0.0.1:4180/renyro-forest-trail/index.html`.
 
-`http://127.0.0.1:4180/renyro-forest-trail/index.html`
+With dependencies installed and Vite already running, pull the branch and hard-refresh the page. There is no separate study build step for the dev server.
 
-If dependencies are already installed and Vite is still running, only `git pull` and a hard browser refresh are needed.
+- **Overview** frames all eight stations and the full fork.
+- **Review branch** brings the camp, decision lookout and destinations closer.
+- **Pause motion** freezes both playback and ambient movement. Reduced-motion preferences start paused.
+- **Controls & notes** retains the execution-frame selector, Next frame, Autoplay, Labels and Reset study controls.
+- **Visit the Insight Tree** opens the hero view through the shared viewer contract.
+- **Frame 4** shows the human-review hold. Select it with motion paused to inspect the state without autoplay advancing.
 
-Use **Overview**, **Review branch**, execution-frame controls, autoplay and the new label toggle. Frame 4 is the key semantic inspection frame because Human Review is in `WAITING` state.
+Labels can be hidden for an unobstructed scene. The status lanterns and waiting signal remain part of the 3D projection.
 
-## Acceptance questions
+## Implementation boundaries
 
-The study is useful only if a viewer can answer these while the scene still feels like a coherent natural environment:
+`scene.js` mounts the existing shared runtime. The study-specific `style.css` styles the page and projected labels. `examples/shared/studies/renyro-forest-trail.js` owns station geometry, annotations and visual state; `renyro-forest-environment.js` owns terrain, path geometry, clustered vegetation and the sun/sky treatment. Neither file changes the fixture or projection logic.
 
-1. Where is execution now?
-2. Where does the confidence branch split?
-3. Is the workflow waiting for a human?
-4. Which path leads to Output Lodge and which leads to Shadow Grove?
-5. Does the Ancient Insight Tree read as the visual/semantic landmark rather than another generic prop?
-6. Do terrain, vegetation and lighting add depth without hiding the workflow?
-
-A pretty forest alone is not a pass. A technically valid graph with weak visual communication is not a pass either.
+Acceptance depends on the actual render: the hero must read clearly, the confidence split must remain visible, and a viewer must distinguish waiting for a human from a running or completed step. See the conversation for this pass's visual observations. Historical trace and validation files describe earlier passes and are not updated by this code-focused refinement.

@@ -1,3 +1,49 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#183126"><title>Renyro Forest Trail Workflow</title><link rel="stylesheet" href="../shared/style.css"></head>
-<body><main class="shell"><section id="viewport" aria-label="Renyro forest trail workflow" aria-busy="true"><canvas id="world" aria-label="Drag to orbit and scroll to zoom"></canvas></section><header class="heading"><p class="eyebrow" id="kicker"></p><h1 id="title">Renyro Forest Trail Workflow</h1><p id="description"></p></header><nav class="toolbar" aria-label="View controls"><button id="overview" type="button">Overview</button><button id="detail" type="button">Review branch</button><button id="pause" type="button" aria-pressed="false">Pause motion</button></nav><details class="panel"><summary>Controls & notes</summary><div class="panel-content"><div id="subject-controls"></div><div class="panel-actions"><button id="reset" type="button">Reset study</button></div><details class="about" id="about"><summary>Model notes & sources</summary><p id="model-note"></p><div id="sources"></div><p id="craft-note"></p></details></div></details><div id="readouts" aria-label="Model readouts"></div><p class="hint">DRAG TO ORBIT · SCROLL TO ZOOM</p><div id="loading" role="status">Preparing the forest trail…</div><p id="error" role="alert" hidden>This scene needs WebGL. Enable hardware acceleration and reload.</p></main><script type="module" src="./scene.js"></script></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183126">
+  <title>Renyro Forest Trail Workflow</title>
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="shell">
+    <section id="viewport" aria-label="Renyro forest trail workflow" aria-busy="true">
+      <canvas id="world" aria-label="Drag to orbit and scroll to zoom"></canvas>
+    </section>
+    <header class="heading">
+      <p class="eyebrow" id="kicker"></p>
+      <h1 id="title">Renyro Forest Trail Workflow</h1>
+      <p id="description"></p>
+    </header>
+    <aside class="trail-legend" aria-label="Trail routes">
+      <span><i></i>High confidence / approved → output</span>
+      <span><i class="review-route"></i>Low confidence → human review</span>
+      <span><i class="exception-route"></i>Rejected → inbox</span>
+    </aside>
+    <nav class="toolbar" aria-label="View controls">
+      <button id="overview" type="button">Overview</button>
+      <button id="detail" type="button">Review branch</button>
+      <button id="pause" type="button" aria-pressed="false">Pause motion</button>
+    </nav>
+    <details class="panel">
+      <summary>Controls & notes</summary>
+      <div class="panel-content">
+        <div id="subject-controls"></div>
+        <div class="panel-actions"><button id="reset" type="button">Reset study</button></div>
+        <details class="about" id="about">
+          <summary>Model notes & sources</summary>
+          <p id="model-note"></p><div id="sources"></div><p id="craft-note"></p>
+        </details>
+      </div>
+    </details>
+    <div id="readouts" aria-label="Model readouts"></div>
+    <p class="hint">DRAG TO ORBIT · SCROLL TO ZOOM · EXPLORE THE STATIONS</p>
+    <div id="loading" role="status">Preparing the forest trail…</div>
+    <p id="error" role="alert" hidden>This scene needs WebGL. Enable hardware acceleration and reload.</p>
+  </main>
+  <script type="module" src="./scene.js"></script>
+</body>
+</html>
