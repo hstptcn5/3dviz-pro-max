@@ -52,6 +52,21 @@ its kinds, so the kinds' one-liners are page copy in `src/lib/knowledge-kind-sum
 kind id; a kind without a line throws, and `tests/catalog-data.test.mjs` holds the two in step. The
 file is ~9 KB, so it ships in the entry bundle.
 
+**The loop section moves once.** `#loop` (`src/sections/loop-section.tsx` + `loop-cards.tsx`)
+reveals block by block the first time each block is scrolled to: the prompt types itself in a word
+at a time, the dashed connectors draw downwards, the route chips pop and lift under the pointer,
+the host probe draws itself as a small flow chart (`loop-probe-diagram.tsx`: the probe node, a
+bus forking into the renderer and capture lanes, each branch a tool mark, its condition and the
+outcome it forces — lines drawn by `stroke-dashoffset`, nodes popping in behind them; the lanes
+stack and the bus becomes a drop line when the card is under 26 rem, and an `sr-only` list carries
+the four condition → outcome pairs), the loop badge's `↺`
+turns (again on hover) while the box's dashed edge — an inset SVG rect, so it can march — drifts
+one slow cycle while it is on screen, and the report chips pop with a single nudge on "Still
+limited". Every animation is opacity or transform only, so layout shift stays 0. The rules live in
+`src/styles/loop-motion.css`, all scoped under `.loop-motion`, a class `useLoopArmed`
+(`loop-motion.tsx`) adds from JavaScript and never under `prefers-reduced-motion`: unarmed, the
+section renders as the finished design, never as a blank one.
+
 Fonts are self-hosted in `public/fonts/` (Outfit, variable `wght` 100–900, for display and body —
 800 for the H1, 700 for section titles, 600 for buttons and card titles; JetBrains Mono for every
 kicker, caption and mono row — latin subsets, OFL, see `public/fonts/OFL.txt`). Only the display

@@ -21,7 +21,13 @@ export default function SiteFooter() {
         <p className="m-0 max-w-[560px] text-[13.5px] leading-[1.65] text-pretty text-dim">{CREDIT}</p>
         <nav aria-label="Footer" className="flex flex-wrap gap-[18px] text-[14px] font-medium">
           {LINKS.map((link) => (
-            <a key={link.label} href={link.href} className="text-green">
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-green"
+              // Repository links leave the page; in-page anchors stay in this tab.
+              {...(link.href.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            >
               {link.label}
             </a>
           ))}

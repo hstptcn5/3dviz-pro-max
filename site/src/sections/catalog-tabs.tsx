@@ -50,7 +50,7 @@ export default function CatalogTabs({ stats, examples, onOpen }: CatalogTabsProp
           <a
             href={panel.browseHref}
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
             className="rounded-full border border-line-strong bg-white px-[18px] py-[11px] font-mono text-[12px] text-green transition-colors duration-150 hover:bg-wash"
           >
             BROWSE THE DATA ↗

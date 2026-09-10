@@ -1,10 +1,18 @@
-<h1 align="center">3Dviz Pro Max</h1>
+<!-- title: 3Dviz Pro Max -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/wordmark-dark.svg">
+    <img src="docs/brand/wordmark.svg" alt="3Dviz Pro Max" height="56">
+  </picture>
+</p>
 
 <p align="center"><b>Turn an idea into a 3D scene worth exploring.</b></p>
 
+<!-- CI badge: static until the repository is public and the workflow has run once, then switch
+     back to https://github.com/viettranx/3dviz-pro-max/actions/workflows/ci.yml/badge.svg -->
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0b7553?style=flat-square"></a>
-  <a href="https://github.com/viettranx/3dviz-pro-max/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/viettranx/3dviz-pro-max/actions/workflows/ci.yml/badge.svg"></a>
+  <a href=".github/workflows/ci.yml"><img alt="CI: validate and package" src="https://img.shields.io/badge/CI-validate%20%26%20package-1c2a23?style=flat-square"></a>
   <a href="docs/installation.md#claude-code"><img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-1c2a23?style=flat-square"></a>
   <a href="docs/installation.md#codex"><img alt="Codex" src="https://img.shields.io/badge/Codex-skill%20folder-1c2a23?style=flat-square"></a>
   <a href="https://threejs.org/"><img alt="three.js 0.180" src="https://img.shields.io/badge/three.js-0.180-0b7553?style=flat-square"></a>
@@ -19,7 +27,7 @@
 </p>
 
 <p align="center">
-  <a href="https://3dviz.dev">Landing page</a><sub> (soon)</sub> ·
+  <a href="https://3dviz.dev">Landing page</a> ·
   <a href="docs/installation.md">Install</a> ·
   <a href="examples/README.md">Examples</a> ·
   <a href="skills/3dviz-pro-max/SKILL.md">Skill</a> ·
@@ -196,7 +204,7 @@ pnpm --dir site install --frozen-lockfile
 pnpm --dir site build                  # build-data → tsc --noEmit → vite build
 ```
 
-The page is **not published yet**: the Cloudflare Pages project is not created, and the Harness Village recording's redistribution rights are still open. Build steps, byte budgets, measured sizes and publishing caveats: [docs/site.md](docs/site.md).
+The page is live at **[3dviz.dev](https://3dviz.dev)** (Cloudflare Pages; anatomy geometry served from R2). Build steps, byte budgets, measured sizes and caveats: [docs/site.md](docs/site.md).
 
 ## Repository map
 

@@ -164,6 +164,9 @@ describe a page that no longer exists.
 - **Compatibility labels are the documented ones.** The install card's WORKS WITH rows carry
   EVALUATED (Codex) and OBSERVED (Claude Code) from [docs/compatibility.md](compatibility.md),
   not the mock-up's "SUPPORTED".
+- **Blender, Three.js and Chromium marks are trademarks of their owners, used to identify the
+  tools.** They are inlined monochrome in the STEP 05 diagram
+  (`site/src/components/brand-logos.tsx`), which names its sources.
 - **BodyParts3D attribution** for the anatomy STLs stays in the page footer and in the examples.
 - The Harness Village recording (`site/public/media/origin/`) is still committed although no
   section plays it since phase 8; its redistribution rights remain to be confirmed and it is

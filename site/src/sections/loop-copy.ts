@@ -41,17 +41,26 @@ export const ROUTE_CHIPS = [
 ] as const;
 
 export const PROBE_KICKER = 'STEP 05 · host-probe.py LOOKS AT YOUR MACHINE';
+export const PROBE_NODE = 'host-probe.py';
 
-export const PROBE_ROWS = [
-  { host: 'Blender ≥ 4.2', result: 'T3 baked hero' },
-  { host: 'no Blender', result: 'T2 procedural surface' },
-  { host: 'Chromium + GPU', result: 'real capture' },
-  { host: 'no GPU path', result: 'SwiftShader, stated' },
+/** The probe diagram: two lanes, each branching on what the machine has into what that forces.
+ *  `mark` names the tool logo drawn beside the condition (`none` for the CPU fallback). */
+export const PROBE_LANES = [
+  {
+    lane: 'renderer',
+    branches: [
+      { mark: 'blender', condition: 'Blender ≥ 4.2', outcome: 'T3 baked hero' },
+      { mark: 'three', condition: 'no Blender', outcome: 'T2 procedural surface' },
+    ],
+  },
+  {
+    lane: 'capture',
+    branches: [
+      { mark: 'chromium', condition: 'Chromium + GPU', outcome: 'real capture' },
+      { mark: 'none', condition: 'no GPU path', outcome: 'SwiftShader, stated' },
+    ],
+  },
 ] as const;
-
-export const PROBE_NOTE =
-  'A pipeline recommendation, not a quality ceiling. Blender does not make an object good; ' +
-  'Three.js alone does not make it cheap.';
 
 export const LOOP_BADGE = 'LOOP ↺ UNTIL IT HOLDS UP';
 

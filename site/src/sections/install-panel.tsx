@@ -37,12 +37,16 @@ export default function InstallPanel({ compatibility }: InstallPanelProps) {
           <div className="flex flex-wrap gap-3">
             <a
               href={GITHUB_REPO}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full bg-white px-6 py-3.5 text-[15px] font-semibold text-ink transition-colors duration-150 hover:bg-mint hover:text-ink"
             >
               Open the repository ↗
             </a>
             <a
               href={INSTALL_DOC}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-white/20 px-6 py-3.5 text-[15px] font-medium text-white transition-colors duration-150 hover:bg-white/8 hover:text-white"
             >
               Installation guide

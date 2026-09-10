@@ -1,6 +1,7 @@
 // Props: none. The design's sticky header: a blurred cream bar over the hero picture, the logo
 // mark and wordmark on the left, three anchors and the GitHub pill on the right. The skip link sits
 // before it so the keyboard reaches the content without walking the bar.
+import BrandCubeLogo from './brand-cube-logo';
 import { GITHUB_REPO } from '../lib/site-links';
 
 const ANCHORS = [
@@ -24,20 +25,7 @@ export default function SiteNav() {
             href="#hero-cinema"
             className="flex items-center gap-2.5 text-[16px] font-bold tracking-[-0.3px] whitespace-nowrap text-ink hover:text-ink"
           >
-            <svg width="32" height="32" viewBox="0 0 48 48" aria-hidden="true" className="block flex-none">
-              <g
-                fill="none"
-                stroke="currentColor"
-                className="text-green"
-                strokeWidth="2.6"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              >
-                <path d="M24 5 41 14.5v19L24 43 7 33.5v-19Z" />
-                <path d="M7 14.5 24 24l17-9.5M24 24v19" />
-              </g>
-              <circle cx="24" cy="24" r="3.2" fill="#c7ef7a" stroke="#0b7553" strokeWidth="1.6" />
-            </svg>
+            <BrandCubeLogo />
             3Dviz Pro Max
           </a>
           <nav aria-label="Site" className="flex items-center gap-1.5 text-[14px] font-medium">
@@ -57,6 +45,8 @@ export default function SiteNav() {
             </ul>
             <a
               href={GITHUB_REPO}
+              target="_blank"
+              rel="noopener noreferrer"
               className="ml-1.5 rounded-full bg-ink px-[18px] py-[9px] font-semibold text-white hover:text-white"
             >
               GitHub
