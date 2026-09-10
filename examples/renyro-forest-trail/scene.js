@@ -6,10 +6,10 @@ mountScene({
   createScene:createRenyroForestTrail,
   meta:{
     title:'Renyro Forest Trail Workflow',
-    kicker:'3DVIZ PRO MAX · NATURE STUDY',
-    description:'A peaceful forest operations trail where each Renyro workflow stage becomes a distinct natural station and execution travels between them as luminous wisps.',
+    kicker:'3DVIZ PRO MAX · REFINED NATURE STUDY',
+    description:'A layered forest operations trail where Renyro execution moves through ranger stations, an Ancient Insight Tree, a readable confidence fork, and distinct success / exception destinations.',
     accent:'#8bd3a8',
-    craft:'Built through the 3Dviz Pro Max skill workflow: nature-first visual direction, object reasoning, semantic construction, real-time state binding, then runtime inspection.',
+    craft:'Final refinement follows the 3Dviz Pro Max loop: inspect the real browser output, identify weak silhouette/repetition/depth/path cues, then rebuild terrain, trails, vegetation, hero detail, lighting and presentation without changing the authoritative workflow state.',
   },
   views:createRenyroForestTrail.views,
 });
