@@ -159,7 +159,7 @@ function makeTerrain(root,m){
 function addForest(root,m){
   const dummy=new THREE.Object3D();
   const trunkGeo=new THREE.CylinderGeometry(.055,.095,.62,7),pineGeo=new THREE.ConeGeometry(.27,.82,7),broadGeo=new THREE.IcosahedronGeometry(.29,1);
-  const trunks=new THREE.InstancedMesh(trunkGeo,m.bark,58),pines=new THREE.InstancedMesh(pineGeo,m.forest,34),broad=new THREE.InstancedMesh(broadGeo,m.leaf,24);
+  const trunks=new THREE.InstancedMesh(trunkGeo,m.bark,80),pines=new THREE.InstancedMesh(pineGeo,m.forest,34),broad=new THREE.InstancedMesh(broadGeo,m.leaf,24);
   let ti=0,pi=0,bi=0;
   for(let k=0;k<80&&(pi<34||bi<24);k++){
     const x=-7.1+(k*2.73%14.2),z=-3.45+(k*1.79%6.9);const nearNode=Object.values(XZ).some(([nx,nz])=>(x-nx)**2+(z-nz)**2<.72);if(nearNode)continue;
