@@ -8,11 +8,9 @@
 
 <p align="center"><b>Turn an idea into a 3D scene worth exploring.</b></p>
 
-<!-- CI badge: static until the repository is public and the workflow has run once, then switch
-     back to https://github.com/viettranx/3dviz-pro-max/actions/workflows/ci.yml/badge.svg -->
 <p align="center">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-0b7553?style=flat-square"></a>
-  <a href=".github/workflows/ci.yml"><img alt="CI: validate and package" src="https://img.shields.io/badge/CI-validate%20%26%20package-1c2a23?style=flat-square"></a>
+  <a href="https://github.com/viettranx/3dviz-pro-max/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/viettranx/3dviz-pro-max/actions/workflows/ci.yml/badge.svg"></a>
   <a href="docs/installation.md#claude-code"><img alt="Claude Code plugin" src="https://img.shields.io/badge/Claude%20Code-plugin-1c2a23?style=flat-square"></a>
   <a href="docs/installation.md#codex"><img alt="Codex" src="https://img.shields.io/badge/Codex-skill%20folder-1c2a23?style=flat-square"></a>
   <a href="https://threejs.org/"><img alt="three.js 0.180" src="https://img.shields.io/badge/three.js-0.180-0b7553?style=flat-square"></a>
